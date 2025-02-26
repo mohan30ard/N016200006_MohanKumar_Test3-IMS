@@ -8,23 +8,23 @@
 <body>
 <div class="container mt-3">
     <h2>Update Product</h2>
-    <form th:action="@{/saveProduct}" th:object="${product}" method="post">
-        <input type="hidden" th:field="*{id}">
+    <form th:action="@{/product/update}" th:object="${product}" method="post">
+        <input type="hidden" th:field="*{productId}">
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
-            <input type="text" class="form-control" id="name" th:field="*{name}" required>
+            <input type="text" class="form-control" id="name" th:field="*{productName}" required>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description:</label>
-            <input type="text" class="form-control" id="description" th:field="*{description}" required>
+            <input type="text" class="form-control" id="description" th:field="*{productDescription}" required>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price:</label>
-            <input type="number" class="form-control" id="price" th:field="*{price}" required>
+            <input type="number" class="form-control" id="price" th:field="*{productPrice}" required>
         </div>
         <div class="mb-3">
             <label for="stock" class="form-label">Stock:</label>
-            <input type="number" class="form-control" id="stock" th:field="*{stock}" required>
+            <input type="number" class="form-control" id="stock" th:field="*{productStock}" required>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
     </form>
